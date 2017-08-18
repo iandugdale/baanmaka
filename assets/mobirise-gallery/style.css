@@ -18,8 +18,8 @@
 .mbr-gallery .icon-focus,
 .mbr-gallery .icon-video {
   position: absolute;
-  top: calc(50% - 24px);
-  left: calc(50% - 32px);
+  top: calc(50% - 32px);
+  left: calc(50% - 24px);
   font-family: 'MobiriseIcons' !important;
   font-size: 3rem !important;
   color: #fff;
@@ -51,22 +51,6 @@
   display: block;
   outline: none;
   position: relative; }
-
-.mbr-gallery .mbr-gallery-item > div::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-linear-gradient(left, #554346, #45505b) !important;
-  background: -moz-linear-gradient(left, #554346, #45505b) !important;
-  background: -o-linear-gradient(left, #554346, #45505b) !important;
-  background: -ms-linear-gradient(left, #554346, #45505b) !important;
-  background: linear-gradient(to left, #554346, #45505b) !important;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out; }
 
 .mbr-gallery .mbr-gallery-item .icon {
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -104,22 +88,6 @@
 .mbr-gallery .mbr-gallery-item > div:hover::before {
   opacity: .9; }
 
-.mbr-gallery-title {
-  font-size: .9em;
-  position: absolute;
-  display: block;
-  width: 100%;
-  bottom: 0;
-  padding: 1rem;
-  color: #fff;
-  background: -webkit-linear-gradient(left, rgba(85, 67, 70, 0.85), rgba(69, 80, 91, 0.85)) !important;
-  background: -moz-linear-gradient(left, rgba(85, 67, 70, 0.85), rgba(69, 80, 91, 0.85)) !important;
-  background: -o-linear-gradient(left, rgba(85, 67, 70, 0.85), rgba(69, 80, 91, 0.85)) !important;
-  background: -ms-linear-gradient(left, rgba(85, 67, 70, 0.85), rgba(69, 80, 91, 0.85)) !important;
-  background: linear-gradient(to left, rgba(85, 67, 70, 0.85), rgba(69, 80, 91, 0.85)) !important;
-  -webkit-transition: .2s background ease-in-out;
-  transition: .2s background ease-in-out; }
-
 .mbr-gallery .mbr-gallery-item > div:hover .mbr-gallery-title {
   background: transparent !important; }
 
@@ -146,7 +114,9 @@
   padding-right: 0 !important; }
 
 .mbr-gallery .modal-content {
-  border-radius: 0; }
+  border-radius: 0;
+  border: none;
+  background: transparent; }
 
 .mbr-gallery .modal-body {
   padding: 0; }
@@ -167,7 +137,7 @@
   top: 2.5rem;
   right: 2.5rem;
   line-height: 70px;
-  border: 0;
+  border: none;
   text-align: center;
   text-shadow: none;
   z-index: 5;
@@ -176,9 +146,8 @@
   -o-transition: opacity .3s ease;
   transition: opacity .3s ease;
   font-family: 'MobiriseIcons'; }
-
-.close::before {
-  content: '\e91a'; }
+  .mbr-gallery .modal .close::before {
+    content: '\e91a'; }
 
 .mbr-gallery .modal .close:hover {
   opacity: 1;
@@ -392,10 +361,10 @@
   padding: 0 !important; }
 
 .mbr-gallery-item__hided img {
-  display: none; }
+  display: none !important; }
 
 .mbr-gallery-item__hided span {
-  display: none; }
+  display: none !important; }
 
 .mbr-gallery-filter {
   padding-top: 30px;
@@ -418,5 +387,65 @@
     padding-left: 0;
     margin-bottom: 0;
     list-style: none; }
+
+.mbr-gallery-item > div {
+  position: relative; }
+
+.mbr-gallery-item--p1 {
+  padding: 0.5rem; }
+
+.mbr-gallery-item--p2 {
+  padding: 1rem; }
+
+.mbr-gallery-item--p3 {
+  padding: 1.5rem; }
+
+.mbr-gallery-item--p4 {
+  padding: 2rem; }
+
+.mbr-gallery-item--p5 {
+  padding: 2.5rem; }
+
+.mbr-gallery-item--p6 {
+  padding: 3rem; }
+
+.mbr-gallery .mbr-gallery-item--p4 {
+  width: 33.333%; }
+
+.mbr-gallery .mbr-gallery-item--p6, .mbr-gallery .mbr-gallery-item--p5 {
+  width: 50%; }
+
+@media (max-width: 992px) {
+  .mbr-gallery-item--p1 {
+    padding: 0.5rem; }
+
+  .mbr-gallery-item--p2 {
+    padding: 0.8rem; }
+
+  .mbr-gallery-item--p3 {
+    padding: 1rem; }
+
+  .mbr-gallery-item--p4 {
+    padding: 1.5rem; }
+
+  .mbr-gallery-item--p5 {
+    padding: 1.8rem; }
+
+  .mbr-gallery-item--p6 {
+    padding: 2rem; }
+
+  .mbr-gallery .mbr-gallery-item--p2,
+  .mbr-gallery .mbr-gallery-item--p3 {
+    width: 50%; }
+
+  .mbr-gallery .mbr-gallery-item--p6,
+  .mbr-gallery .mbr-gallery-item--p5,
+  .mbr-gallery .mbr-gallery-item--p4 {
+    width: 100%; } }
+@media (max-width: 400px) {
+  .mbr-gallery .mbr-gallery-item--p3,
+  .mbr-gallery .mbr-gallery-item--p2,
+  .mbr-gallery .mbr-gallery-item--p1 {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
